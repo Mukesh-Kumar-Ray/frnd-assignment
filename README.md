@@ -105,12 +105,12 @@ backend/
   - CSV file: `optimized_report.csv` with columns: `truckId`, `company`, `capacity`, `assignedLoad`, `costShare`
 - **Example Request:**  
   ```
-  GET /api/trucks/export?totalCost=5000
+  GET /api/trucks/export-report?totalCost=5000
   ```
 
 ### 2. Calculate Cost Per Company
 
-- **Endpoint:** `GET /api/trucks/cost`
+- **Endpoint:** `GET /api/trucks/calculate-cost`
 - **Description:**  
   - Aggregates the cost share for each company from the latest optimization report.
 - **Response:**  
@@ -168,11 +168,7 @@ backend/
 
 7. **Test the API**
    - Use Postman or your browser to access endpoints like:
-     - `GET http://localhost:5000/api/trucks/export`
-     - `GET http://localhost:5000/api/trucks/cost`
+     - `POST http://localhost:5000/api/upload`
+     - `GET http://localhost:5000/api/trucks/export-report`
+     - `POST http://localhost:5000/api/trucks/calculate-cost`
 
----
-
----
-
-*Feel free to modify this README as your project evolves!*
